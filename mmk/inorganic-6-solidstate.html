@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>固态化学与晶体学 — 大学无机化学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">无机化学学习网</div>
+    <ul class="nav-links">
+      <li><a href="index.html">主页</a></li>
+      <li><a href="inorganic-6-solidstate.html">课程：固态化学</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header>
+      <h1>固态化学与晶体学</h1>
+      <p>晶体结构、缺陷与固体的物性。</p>
+    </header>
+
+    <article>
+      <h2>章节目标</h2>
+      <p>掌握晶体的基本结构类型、布拉维格子与缺陷类型对材料性能的影响。</p>
+
+      <h3>内容要点</h3>
+      <ul>
+        <li>立方、六方、面心与体心晶格。</li>
+        <li>点缺陷与线缺陷对电导与扩散的影响。</li>
+        <li>X射线衍射与布拉格定律简介。</li>
+      </ul>
+
+      <h3>练习</h3>
+      <p>根据晶胞参数判定晶体类型并计算晶格常数相关问题。</p>
+
+      <h3>你的笔记</h3>
+      <textarea id="notes" class="notes-area" placeholder="在此写下你对本节的笔记，浏览器会保存到本地。" style="width:100%;min-height:160px;padding:10px;border:1px solid #e6e9ef;border-radius:6px"></textarea>
+
+    </article>
+
+    <footer style="margin-top:20px">
+      <a href="index.html">返回课程大纲</a>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const ta = document.getElementById('notes');
+      const key = 'notes:' + location.pathname;
+      try { const saved = localStorage.getItem(key); if (saved) ta.value = saved;}catch(e){}
+      let t;
+      ta.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ try{ localStorage.setItem(key, ta.value); }catch(e){} }, 400); });
+    })();
+  </script>
+</body>
+</html>

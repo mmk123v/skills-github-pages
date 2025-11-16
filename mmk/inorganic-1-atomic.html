@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>原子结构与周期律 — 大学无机化学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">无机化学学习网</div>
+    <ul class="nav-links">
+      <li><a href="index.html">主页</a></li>
+      <li><a href="inorganic-1-atomic.html">课程：原子结构</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header>
+      <h1>原子结构与周期律</h1>
+      <p>详细章节 — 电子构型、能级、周期趋势与应用。</p>
+    </header>
+
+    <article>
+      <h2>章节目标</h2>
+      <p>理解原子内部电子分布的基本规律，掌握周期表背后的物理原理，并能利用周期律预测元素的化学性质。</p>
+
+      <h3>详细内容</h3>
+      <ul>
+        <li>量子数与轨道：主量子数、角量子数、自旋量子数。</li>
+        <li>电子排布规则：泡利不相容原理、洪特规则、能级排序（Aufbau 原理）。</li>
+        <li>周期律：原子半径、离子半径、第一电离能、电子亲和能、电负性等趋势。</li>
+        <li>屏蔽效应与多电子原子的能级修正。</li>
+      </ul>
+
+      <h3>重点例题</h3>
+      <p>给出元素的电子组态并解释其化学活性；比较同周期元素的电子亲和能差异并讨论原因。</p>
+
+      <h3>推荐阅读与练习</h3>
+      <ul>
+        <li>教科书章节：Huheey 等《Inorganic Chemistry》相关章节。</li>
+        <li>练习：填写第3周期元素的电子排布并解释其氧化态的常见值。</li>
+      </ul>
+
+      <h3>你的笔记</h3>
+      <textarea id="notes" class="notes-area" placeholder="在此写下你对本节的笔记，浏览器会保存到本地。" style="width:100%;min-height:160px;padding:10px;border:1px solid #e6e9ef;border-radius:6px"></textarea>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px">提示：笔记会保存在本地（本机浏览器）。</div>
+
+    </article>
+
+    <footer style="margin-top:20px">
+      <a href="index.html">返回课程大纲</a>
+    </footer>
+  </main>
+
+  <script>
+    // 简单本地笔记保存（基于页面路径）
+    (function(){
+      const ta = document.getElementById('notes');
+      const key = 'notes:' + location.pathname;
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved) ta.value = saved;
+      } catch(e){}
+      let t;
+      ta.addEventListener('input', ()=>{
+        clearTimeout(t);
+        t = setTimeout(()=>{ try{ localStorage.setItem(key, ta.value); }catch(e){} }, 400);
+      });
+    })();
+  </script>
+</body>
+</html>

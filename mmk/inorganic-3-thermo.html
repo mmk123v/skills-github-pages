@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>热力学基础 — 大学无机化学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">无机化学学习网</div>
+    <ul class="nav-links">
+      <li><a href="index.html">主页</a></li>
+      <li><a href="inorganic-3-thermo.html">课程：热力学</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header>
+      <h1>热力学基础</h1>
+      <p>自由能、平衡常数与反应驱动力。</p>
+    </header>
+
+    <article>
+      <h2>章节目标</h2>
+      <p>掌握热力学函数（G、H、S）与化学平衡的联系，以及如何用ΔG和K来判断反应自发性。</p>
+
+      <h3>详细内容</h3>
+      <ul>
+        <li>热力学第一、第二定律概述。</li>
+        <li>吉布斯自由能与化学平衡关系：ΔG° = -RT ln K。</li>
+        <li>热力学与动力学的区别。</li>
+      </ul>
+
+      <h3>练习</h3>
+      <p>计算某反应在给定温度下的平衡常数；比较不同温度下ΔG的变化。</p>
+
+      <h3>你的笔记</h3>
+      <textarea id="notes" class="notes-area" placeholder="在此写下你对本节的笔记，浏览器会保存到本地。" style="width:100%;min-height:160px;padding:10px;border:1px solid #e6e9ef;border-radius:6px"></textarea>
+    </article>
+
+    <footer style="margin-top:20px">
+      <a href="index.html">返回课程大纲</a>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const ta = document.getElementById('notes');
+      const key = 'notes:' + location.pathname;
+      try { const saved = localStorage.getItem(key); if (saved) ta.value = saved;}catch(e){}
+      let t;
+      ta.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ try{ localStorage.setItem(key, ta.value); }catch(e){} }, 400); });
+    })();
+  </script>
+</body>
+</html>

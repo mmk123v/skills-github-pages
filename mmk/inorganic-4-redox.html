@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>氧化还原反应 — 大学无机化学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">无机化学学习网</div>
+    <ul class="nav-links">
+      <li><a href="index.html">主页</a></li>
+      <li><a href="inorganic-4-redox.html">课程：氧化还原</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header>
+      <h1>氧化还原反应</h1>
+      <p>电子转移、半反应方法、电极电位与电化学。</p>
+    </header>
+
+    <section>
+      <h2>章节目标</h2>
+      <p>理解氧化还原反应的电子流动、计算电池电动势并能书写平衡的半反应。</p>
+
+      <h3>内容要点</h3>
+      <ul>
+        <li>氧化数的判定与电子转移。</li>
+        <li>标准电极电位表的使用。</li>
+        <li>电池、电解和腐蚀的基础。</li>
+      </ul>
+
+      <h3>练习</h3>
+      <p>计算标准条件下某电化学反应的电动势并讨论其可行性。</p>
+
+      <h3>你的笔记</h3>
+      <textarea id="notes" class="notes-area" placeholder="在此写下你对本节的笔记，浏览器会保存到本地。" style="width:100%;min-height:160px;padding:10px;border:1px solid #e6e9ef;border-radius:6px"></textarea>
+
+    </section>
+
+    <footer style="margin-top:20px">
+      <a href="index.html">返回课程大纲</a>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const ta = document.getElementById('notes');
+      const key = 'notes:' + location.pathname;
+      try { const saved = localStorage.getItem(key); if (saved) ta.value = saved;}catch(e){}
+      let t;
+      ta.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ try{ localStorage.setItem(key, ta.value); }catch(e){} }, 400); });
+    })();
+  </script>
+</body>
+</html>

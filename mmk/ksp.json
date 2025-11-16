@@ -1,0 +1,42 @@
+[
+  {
+    "key": "agcl",
+    "name": "氯化银",
+    "formula": "AgCl",
+    "ions": [{"ion":"Ag+","coef":1},{"ion":"Cl-","coef":1}],
+    "ksp": "1.8×10⁻¹⁰",
+    "ksp_val": 1.8e-10,
+    "equation": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)",
+    "note": "难溶，常见沉淀"
+  },
+  {
+    "key": "cuoh2",
+    "name": "氢氧化铜",
+    "formula": "Cu(OH)₂",
+    "ions": [{"ion":"Cu2+","coef":1},{"ion":"OH-","coef":2}],
+    "ksp": "2.2×10⁻²⁰",
+    "ksp_val": 2.2e-20,
+    "equation": "Cu²⁺(aq) + 2OH⁻(aq) → Cu(OH)₂(s)",
+    "note": "蓝色沉淀"
+  },
+  {
+    "key": "baso4",
+    "name": "硫酸钡",
+    "formula": "BaSO₄",
+    "ions": [{"ion":"Ba2+","coef":1},{"ion":"SO4 2-","coef":1}],
+    "ksp": "1.1×10⁻¹⁰",
+    "ksp_val": 1.1e-10,
+    "equation": "Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s)",
+    "note": "非常难溶，常用于沉淀离子检验"
+  },
+  {
+    "key": "nacl",
+    "name": "氯化钠（示例）",
+    "formula": "NaCl",
+    "ions": [{"ion":"Na+","coef":1},{"ion":"Cl-","coef":1}],
+    "ksp": "溶于水",
+    "ksp_val": null,
+    "equation": "Na⁺(aq) + Cl⁻(aq) → NaCl (可溶)",
+    "note": "强电解质，通常不形成沉淀"
+  }
+]

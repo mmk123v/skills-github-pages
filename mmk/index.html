@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无机化学学习网</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">无机化学学习网</div>
+        <ul class="nav-links">
+            <li><a href="#periodic">元素周期表</a></li>
+            <li><a href="#bonds">化学键</a></li>
+            <li><a href="#reactions">化学反应</a></li>
+        </ul>
+    </nav>
+
+    <header class="banner">
+        <h1>探索无机化学的奥秘</h1>
+        <p>从元素性质到化学反应，零基础入门指南</p>
+    </header>
+
+    <!-- 顶部 Ksp 搜索（已移动） -->
+    <section id="ksp-search-top" class="content-section">
+        <div class="content">
+            <div class="ksp-search-row">
+                <input id="ksp-query" type="search" placeholder="输入化合物或离子，例如：AgCl、Ag+、BaSO4" aria-label="Ksp 搜索框">
+                <button id="ksp-search-btn" type="button">搜索 Ksp</button>
+            </div>
+            <div id="ksp-compare" class="ksp-compare" aria-live="polite"></div>
+            <div id="ksp-results" class="ksp-results" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <main>
+        <section id="periodic" class="content-section">
+            <h2>元素周期表</h2>
+            <div class="content">
+                <p>元素周期表是按原子序数排列的化学元素列表，反映了元素性质的周期性变化。</p>
+                <img src="images/periodic-table.jpg" alt="元素周期表" class="periodic-img">
+
+                <div class="element-card" data-element="hydrogen">
+                    <div class="num">1</div>
+                    <div class="symbol">H</div>
+                    <div class="name">氢</div>
+                    <div class="weight">1.008</div>
+                </div>
+                <div class="element-card" data-element="sodium">
+                    <div class="num">11</div>
+                    <div class="symbol">Na</div>
+                    <div class="name">钠</div>
+                    <div class="weight">22.99</div>
+                </div>
+                <div class="element-card" data-element="chlorine">
+                    <div class="num">17</div>
+                    <div class="symbol">Cl</div>
+                    <div class="name">氯</div>
+                    <div class="weight">35.45</div>
+                </div>
+                <div class="element-card" data-element="oxygen">
+                    <div class="num">8</div>
+                    <div class="symbol">O</div>
+                    <div class="name">氧</div>
+                    <div class="weight">16.00</div>
+                </div>
+                <div class="element-card" data-element="copper">
+                    <div class="num">29</div>
+                    <div class="symbol">Cu</div>
+                    <div class="name">铜</div>
+                    <div class="weight">63.55</div>
+                </div>
+                <div class="element-card" data-element="barium">
+                    <div class="num">56</div>
+                    <div class="symbol">Ba</div>
+                    <div class="name">钡</div>
+                    <div class="weight">137.33</div>
+                </div>
+                <div class="element-card" data-element="silver">
+                    <div class="num">47</div>
+                    <div class="symbol">Ag</div>
+                    <div class="name">银</div>
+                    <div class="weight">107.87</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bonds" class="content-section">
+            <h2>化学键类型</h2>
+            <div class="content">
+                <div class="bond-item">
+                    <h3>离子键</h3>
+                    <p>由金属和非金属原子间电子转移形成（如 NaCl），具有高熔点、易溶于水等性质。</p>
+                </div>
+                <div class="bond-item">
+                    <h3>共价键</h3>
+                    <p>原子间通过共用电子对形成（如 H₂O），可分为极性键和非极性键。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reactions" class="content-section">
+            <h2>常见无机反应</h2>
+            <div class="content">
+                <ul>
+                    <li>酸碱中和：HCl + NaOH → NaCl + H₂O</li>
+                    <li>氧化还原：2Mg + O₂ → 2MgO（燃烧反应）</li>
+                </ul>
+
+                <div class="precipitation-section">
+                    <h3>沉淀反应（Precipitation Reactions）</h3>
+                    <p>沉淀反应是指溶液中离子结合形成难溶物（溶度积常数 Ksp 较小）而析出的反应，其方向由溶度积规则判断：</p>
+                    <ul>
+                        <li>当离子积 Qc &gt; Ksp 时，溶液过饱和，生成沉淀；</li>
+                        <li>当 Qc = Ksp 时，溶液饱和，达到平衡；</li>
+                        <li>当 Qc &lt; Ksp 时，溶液未饱和，无沉淀生成（或沉淀溶解）。</li>
+                    </ul>
+                    <p>典型例子：</p>
+                    <ul>
+                        <li>氯化银沉淀：Ag⁺(aq) + Cl⁻(aq) → AgCl↓（Ksp = 1.8×10⁻¹⁰）</li>
+                        <li>氢氧化铜沉淀：Cu²⁺(aq) + 2OH⁻(aq) → Cu(OH)₂↓（Ksp = 2.2×10⁻²⁰）</li>
+                        <li>硫酸钡沉淀：Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄↓（Ksp = 1.1×10⁻¹⁰）</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 大学无机化学课程（大纲 + 分节 + 概要） -->
+        <section id="inorganic-course" class="content-section">
+            <h2>大学无机化学课程大纲</h2>
+            <div class="content">
+                <p>本课程旨在系统介绍无机化学的核心概念与应用，适合本科生作为主干课程或选修。</p>
+
+                <h3>课程大纲（快速导航）</h3>
+                <ol class="course-outline">
+                    <li><a href="inorganic-1-atomic.html">原子结构与周期律（详细页）</a></li>
+                    <li><a href="inorganic-2-bonding.html">化学键与分子结构（详细页）</a></li>
+                    <li><a href="inorganic-3-coordination.html">配位化学与配合物（详细页）</a></li>
+                    <li><a href="inorganic-4-descriptive.html">描述性无机化学（主族与过渡族）（详细页）</a></li>
+                    <li><a href="inorganic-5-solid.html">固体与材料化学（详细页）</a></li>
+                    <li><a href="inorganic-6-thermo.html">热力学与动力学（详细页）</a></li>
+                    <li><a href="inorganic-7-spectro.html">光谱、表征与分析方法（详细页）</a></li>
+                    <li><a href="inorganic-8-organometal.html">有机金属化学简介（详细页）</a></li>
+                    <li><a href="inorganic-9-bioinorg.html">生物无机化学（详细页）</a></li>
+                    <li><a href="inorganic-10-apps.html">应用与实验技能（详细页）</a></li>
+                </ol>
+
+                <hr>
+
+                <section id="topic-atomic" class="topic">
+                    <h4>1. 原子结构与周期律</h4>
+                    <p>内容概述：电子构型、量子数、能级与轨道、原子半径、电离能、电负性以及周期表的系统性与周期性趋势。</p>
+                    <ul>
+                        <li>关键点：泡利不相容原理、洪特规则、屏蔽效应。</li>
+                        <li>应用：元素性质预测、离子半径与晶体结构关联。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-bonding" class="topic">
+                    <h4>2. 化学键与分子结构</h4>
+                    <p>内容概述：离子键、共价键与金属键的本质；价轨道理论（VBT）与分子轨道理论（MOT）；配位键与配位数的影响。</p>
+                    <ul>
+                        <li>关键点：杂化轨道、σ/π 键、键能与键长。</li>
+                        <li>工具：MOT 用于解释磁性与光谱性质。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-coordination" class="topic">
+                    <h4>3. 配位化学与配合物</h4>
+                    <p>内容概述：配体分类、配位数、配位几何、电子结构（场论、配位场分裂），配合物的稳定性常数与配体场强弱顺序。</p>
+                    <ul>
+                        <li>关键点：朗德-施泰纳范德瓦尔斯、配位异构体、配合物的色彩与磁性。</li>
+                        <li>实验与应用：配位化学在催化、生物化学（血红素、催化剂）中的角色。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-descriptive" class="topic">
+                    <h4>4. 描述性无机化学</h4>
+                    <p>内容概述：逐族或逐段讲解主族元素与过渡金属的重要化学性质、典型化合物、工业应用和常见反应。</p>
+                    <ul>
+                        <li>例如：卤素与卤化物、碱金属/碱土金属的反应性、过渡金属的氧化态与配位化学。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-solid" class="topic">
+                    <h4>5. 固体与材料化学</h4>
+                    <p>内容概述：晶体结构（点阵与晶格）、缺陷、导电/半导体/绝缘体分类、离子导体与磁性材料基础。</p>
+                    <ul>
+                        <li>关键点：布拉维格子、X 射线衍射基本原理、晶体场效应。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-thermo" class="topic">
+                    <h4>6. 热力学与动力学</h4>
+                    <p>内容概述：反应热、自由能、溶解度与溶度积（Ksp），以及反应速率、机理和电子转移过程的动力学考量。</p>
+                    <ul>
+                        <li>关键点：Gibbs 自由能与平衡常数、活化能与速率方程、催化与过渡态理论。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-spectro" class="topic">
+                    <h4>7. 光谱、表征与分析方法</h4>
+                    <p>内容概述：红外（IR）、紫外可见（UV-Vis）、核磁共振（NMR，主要用于含核的配合物/有机金属）、质谱、XRD 与电化学技术。</p>
+                    <ul>
+                        <li>应用：通过谱学鉴定配位环境、氧化态与键合信息。</li>
+                    </ul>
+                </section>
+
+                <section id="topic-organometal" class="topic">
+                    <h4>8. 有机金属化学简介</h4>
+                    <p>内容概述：M–C 键的类型、常见有机金属配合物、催化（如加氢、交叉偶联）中的作用与基本反应步骤（氧化加成、迁移插入、还原消除）。</p>
+                </section>
+
+                <section id="topic-bioinorg" class="topic">
+                    <h4>9. 生物无机化学</h4>
+                    <p>内容概述：金属在生物体系中的功能，如金属酶（Fe、Cu、Zn）、金属-配体在电子传递与催化中的角色，以及金属离子在药物化学中的应用。</p>
+                </section>
+
+                <section id="topic-apps" class="topic">
+                    <h4>10. 应用与实验技能</h4>
+                    <p>内容概述：无机合成与分离技术、滴定与定量分析、溶解度与沉淀实验，以及将理论知识应用于材料、催化、分析和环境化学问题。</p>
+                    <ul>
+                        <li>建议实验：制备沉淀样品、配合物合成、简单的电化学测量。</li>
+                    </ul>
+                </section>
+
+                <hr>
+                <p><strong>推荐教材与延伸阅读：</strong></p>
+                <ul>
+                    <li>Huheey, E. A., Keiter, E. A. & Keiter, R. L., Inorganic Chemistry（经典教材，系统且详实）。</li>
+                    <li>Atkins & de Paula 的物理化学章节（热力学与动力学部分）。</li>
+                    <li>在线资源：化学教育网站、NIST 化学数据库与期刊综述。</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+        <!-- 底部的旧 Ksp 搜索区块已移除（顶部已存在） -->
+
+    <footer>
+        <p>© <span class="year">2025</span> 无机化学学习网 | 用 VS Code 制作</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

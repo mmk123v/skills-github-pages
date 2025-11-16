@@ -1,0 +1,214 @@
+/* style.css — 合并与清理后的主样式 */
+:root{
+  --bg: #f7f7fb;
+  --fg: #0b0b0b;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --brand: #2d5e89;
+  --brand-2: #4a89dc;
+  --card: #a0c4ff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Microsoft YaHei", Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* 布局容器（用于文档示例区块） */
+.container{
+  max-width:960px;
+  margin:3rem auto;
+  padding:1.5rem;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 6px 24px rgba(16,24,40,0.08);
+}
+
+/* 导航 */
+.navbar{
+  background:var(--brand);
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{color:#fff;font-size:22px;font-weight:700}
+.nav-links{display:flex;list-style:none}
+.nav-links li{margin-left:24px}
+.nav-links a{color:#fff;text-decoration:none;font-size:16px}
+.nav-links a:hover{color:#ffd700}
+
+/* 横幅 */
+.banner{background:var(--brand-2);color:#fff;text-align:center;padding:64px 20px}
+.banner h1{font-size:40px;margin-bottom:12px}
+.banner p{font-size:18px;opacity:0.95}
+
+/* 内容区块 */
+.content-section{max-width:1200px;margin:50px auto;padding:0 20px}
+.content-section h2{color:var(--brand);font-size:28px;margin-bottom:20px;border-bottom:2px solid var(--brand-2);padding-bottom:10px}
+.content{background:#fff;padding:30px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.06)}
+
+.periodic-img{max-width:100%;margin:20px 0;border-radius:6px}
+
+/* 元素卡片 */
+.element-card{display:inline-block;width:80px;height:80px;background:var(--card);border-radius:6px;text-align:center;padding:6px;margin:10px;cursor:pointer;transition:transform .18s ease}
+.element-card:hover{transform:scale(1.06)}
+.element-card .num{font-size:12px}
+.element-card .symbol{font-size:24px;font-weight:700}
+.element-card .name{font-size:12px}
+
+/* 化学键 */
+.bond-item{margin-bottom:20px;padding-left:10px;border-left:3px solid var(--brand-2)}
+.bond-item h3{color:var(--brand);margin-bottom:6px}
+
+/* 页脚 */
+footer{background:var(--brand);color:#fff;text-align:center;padding:18px;margin-top:50px}
+footer p{margin:0}
+
+/* 便捷链接样式 */
+a{color:var(--accent);text-decoration:none}
+
+@media (max-width:600px){
+  .container{margin:1rem;padding:1rem;border-radius:6px}
+  .banner{padding:40px 12px}
+}
+
+/* 沉淀反应专题样式（用户提供） */
+.precipitation-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--brand-2);
+}
+
+.precipitation-section h3 {
+  color: #d35400; /* 橙色突出沉淀反应主题 */
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* 溶度积搜索区域样式（兼容现有类名） */
+.ksp-search-row, .search-box {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#ksp-query, #substance-input {
+  padding: 8px 12px;
+  width: 300px;
+  border: 2px solid var(--brand-2);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.ksp-search-row button, .search-box button {
+  padding: 8px 20px;
+  background-color: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ksp-search-row button:hover, .search-box button:hover {
+  background-color: var(--brand-2);
+}
+
+/* 搜索结果容器（兼容现有类名） */
+.ksp-results, .result-box {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  min-height: 50px;
+}
+
+/* 比较栏样式 */
+.ksp-compare{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.ksp-compare .compare-item{background:#fff;border:1px solid #e6eef8;padding:6px 8px;border-radius:6px;display:flex;gap:8px;align-items:center}
+.ksp-compare .compare-item .remove{background:transparent;border:none;color:var(--brand);cursor:pointer}
+.ksp-compare .compare-clear{background:transparent;border:1px solid #e6eef8;padding:6px 8px;border-radius:6px;color:var(--muted);cursor:pointer}
+
+/* 快捷操作按钮 */
+.ksp-card .quick-actions{margin-top:10px;display:flex;gap:8px}
+.ksp-card .quick-actions button{padding:6px 8px;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer}
+.ksp-card .quick-actions button.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* 并排比较表格样式 */
+.compare-table{width:100%;border-collapse:collapse;margin-top:10px;background:#fff;border-radius:6px;overflow:hidden}
+.compare-table th,.compare-table td{padding:10px 12px;border-bottom:1px solid #eef2f6;text-align:left;font-size:14px}
+.compare-table th{background:linear-gradient(180deg, #f8fbff, #fff);color:var(--brand);font-weight:700}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-actions{display:flex;gap:8px;align-items:center}
+
+@media (max-width:800px){
+  .compare-table th,.compare-table td{font-size:13px;padding:8px}
+}
+
+/* 课程内容样式 */
+.course-outline{margin:10px 0 16px 18px}
+.topic h4{margin:10px 0 6px;font-size:16px;color:var(--brand)}
+.topic p{margin:0 0 8px;color:var(--muted)}
+.topic ul{margin:0 0 12px 18px}
+
+.result-success {
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+}
+
+.result-error {
+  background-color: #ffebee;
+  border: 1px solid #e57373;
+}
+
+/* 元素信息侧边面板 */
+.element-info-panel{
+  position:fixed;
+  right:16px;
+  top:80px;
+  width:320px;
+  max-width:calc(100% - 32px);
+  background:#fff;
+  border:1px solid rgba(16,24,40,0.08);
+  box-shadow:0 12px 40px rgba(2,6,23,0.12);
+  border-radius:8px;
+  padding:14px;
+  z-index:10000;
+  transform:translateX(12px);
+  transition:transform .18s ease,opacity .18s ease;
+  opacity:0;
+}
+.element-info-panel.open{transform:translateX(0);opacity:1}
+.element-info-panel .close-btn{position:absolute;right:8px;top:8px;border:none;background:transparent;cursor:pointer;font-size:16px}
+.element-info-panel h3{margin:0 0 8px;font-size:18px}
+.element-info-panel h3{font-weight:800;color:var(--brand)}
+.element-info-panel p{margin:6px 0;color:var(--muted);font-size:14px}
+
+@media (max-width:700px){
+  .element-info-panel{right:8px;left:8px;top:auto;bottom:16px;width:auto}
+}
+
+
+/* Ksp 搜索样式 */
+.ksp-search-row{display:flex;gap:8px;align-items:center}
+.ksp-search-row input[type="search"]{flex:1;padding:10px 12px;border:1px solid #e6e9ef;border-radius:6px;font-size:14px}
+.ksp-search-row button{padding:10px 14px;border:none;background:var(--accent);color:#fff;border-radius:6px;cursor:pointer}
+.ksp-search-row button:hover{opacity:0.95}
+.ksp-results{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.ksp-card{padding:12px;border-radius:8px;background:#fafafa;border:1px solid #eef2f6}
+.ksp-card h4{margin:0 0 6px;font-size:16px}
+.ksp-meta{font-size:13px;color:var(--muted)}
+.ksp-ksp{font-weight:700;color:var(--brand)}
+.ksp-no-results{color:var(--muted);font-style:italic}
+
+@media (max-width:600px){
+  .ksp-search-row{flex-direction:column;align-items:stretch}
+  .ksp-search-row button{width:100%}
+}
